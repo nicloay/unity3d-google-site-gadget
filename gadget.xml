@@ -140,12 +140,10 @@
                 <div id="unityPlayer">
                     <div class="missing">
                         <a href="//unity3d.com/webplayer/" title="Unity Web Player. Install now!">
-                            <img alt="Unity Web Player. Install now!" id="getUnityPNG" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
                         </a>
                     </div>
                     <div class="broken">
                         <a href="//unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
-                            <img alt="Unity Web Player. Install now! Restart your browser after install." id="getUnityRestartPNG" src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
                         </a>
                     </div>
                 </div>
@@ -154,10 +152,14 @@
 		<p class="footer">&laquo; created with <a href="//unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
 
         <script type="text/javascript">
+            var missingTag='<img alt="Unity Web Player. Install now!" id="getUnityPNG" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />';
+            var brokenTag ='<img alt="Unity Web Player. Install now! Restart your browser after install." id="getUnityRestartPNG" src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />'
             if (document.location.protocol == 'https:'){
-                $("#getUnityPNG").attr("src",$("#getUnityPNG")[0].src.replace("http://", "https://ssl-"));
-                $("#getUnityRestartPNG").attr("src",$("#getUnityRestartPNG")[0].src.replace("http://", "https://ssl-"));
+                missingTag.replace("http://", "https://ssl-"));
+                brokenTag.replace("http://", "https://ssl-"));
 	    	}
+	    	$(".missing a").append(missingTag);
+            #(".broken a").append(brokenTag);
         </script>
 ]]>
     </Content>
