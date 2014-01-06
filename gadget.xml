@@ -83,7 +83,7 @@
 			});
 		</script>
 		<style type="text/css">
-		body {
+		.boddy {
 			font-family: Helvetica, Verdana, Arial, sans-serif;
 			background-color: white;
 			color: black;
@@ -135,23 +135,30 @@
 		}
 		}
 		</style>
-
-				<div class="content">
-			<div id="unityPlayer">
-				<div class="missing">
-					<a href="//unity3d.com/webplayer/" title="Unity Web Player. Install now!">
-						<img alt="Unity Web Player. Install now!" id="getUnityPNG" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
-					</a>
-				</div>
-				<div class="broken">
-					<a href="//unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
-						<img alt="Unity Web Player. Install now! Restart your browser after install." id="getUnityRestartPNG" src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
-					</a>
-				</div>
-			</div>
-		</div>
+        <div id="boddy">
+            <div class="content">
+                <div id="unityPlayer">
+                    <div class="missing">
+                        <a href="//unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+                            <img alt="Unity Web Player. Install now!" id="getUnityPNG" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+                        </a>
+                    </div>
+                    <div class="broken">
+                        <a href="//unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
+                            <img alt="Unity Web Player. Install now! Restart your browser after install." id="getUnityRestartPNG" src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </boddy>
 		<p class="footer">&laquo; created with <a href="//unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
 
+        <script type="text/javascript">
+            if (document.location.protocol == 'https:'){
+                $("#getUnityPNG").attr("src",$("#getUnityPNG")[0].src.replace("http://", "https://ssl-"));
+                $("#getUnityRestartPNG").attr("src",$("#getUnityRestartPNG")[0].src.replace("http://", "https://ssl-"));
+	    	}
+        </script>
 ]]>
     </Content>
 </Module>
