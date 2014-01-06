@@ -81,7 +81,7 @@
 						break;
 					}
 				});
-				u.initPlugin(jQuery("#unityPlayer")[0], "2DWinterPack.unity3d");
+				u.initPlugin(jQuery("#unityPlayer")[0], prefs.getString("url"));
 			});
 		</script>
 		<style type="text/css">
