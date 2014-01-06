@@ -20,8 +20,8 @@
 		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
 		if (document.location.protocol == 'https:'){
 			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
-            $("#getUnityPNG").attr("src",$("#getUnityPNG").src.replace("http://", "https://ssl-"));
-            $("#getUnityRestartPNG").attr("src",$("#getUnityRestartPNG").src.replace("http://", "https://ssl-"));
+            $("#getUnityPNG").attr("src",$("#getUnityPNG")[0].src.replace("http://", "https://ssl-"));
+            $("#getUnityRestartPNG").attr("src",$("#getUnityRestartPNG")[0].src.replace("http://", "https://ssl-"));
 		}
 		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
 		-->
