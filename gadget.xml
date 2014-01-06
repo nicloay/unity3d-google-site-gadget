@@ -119,6 +119,7 @@
 		div.missing a {
 			height: 63px;
 			position: relative;
+			top: 20px;
 		}
 		div.broken img,
 		div.missing img {
@@ -157,8 +158,8 @@
                 missingTag.replace("http://", "https://ssl-");
                 brokenTag.replace("http://", "https://ssl-");
 	    	}
-	    	$(".missing a").append(missingTag);
-            $(".broken a").append(brokenTag);
+	    	//$(".missing a").append(missingTag);
+            //$(".broken a").append(brokenTag);
         </script>
 ]]>
     </Content>
