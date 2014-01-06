@@ -155,11 +155,11 @@
             var missingTag='<img alt="Unity Web Player. Install now!" id="getUnityPNG" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />';
             var brokenTag ='<img alt="Unity Web Player. Install now! Restart your browser after install." id="getUnityRestartPNG" src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />'
             if (document.location.protocol == 'https:'){
-                missingTag.replace("http://", "https://ssl-");
-                brokenTag.replace("http://", "https://ssl-");
+                missingTag = missingTag.replace("http://", "https://ssl-");
+                brokenTag = brokenTag.replace("http://", "https://ssl-");
 	    	}
-	    	//$(".missing a").append(missingTag);
-            //$(".broken a").append(brokenTag);
+	    	$(".missing a").append(missingTag);
+            $(".broken a").append(brokenTag);
         </script>
 ]]>
     </Content>
