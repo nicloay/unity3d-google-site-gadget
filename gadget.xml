@@ -83,7 +83,7 @@
 			});
 		</script>
 		<style type="text/css">
-		.boddy {
+		#boddy {
 			font-family: Helvetica, Verdana, Arial, sans-serif;
 			background-color: white;
 			color: black;
