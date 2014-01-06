@@ -119,7 +119,6 @@
 		div.missing a {
 			height: 63px;
 			position: relative;
-			top: -31px;
 		}
 		div.broken img,
 		div.missing img {
