@@ -159,7 +159,7 @@
                 brokenTag.replace("http://", "https://ssl-");
 	    	}
 	    	$(".missing a").append(missingTag);
-            #(".broken a").append(brokenTag);
+            $(".broken a").append(brokenTag);
         </script>
 ]]>
     </Content>
