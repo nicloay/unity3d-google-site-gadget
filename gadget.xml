@@ -10,8 +10,7 @@
     <UserPref name="title" display_name="Title" required="true" default_value="Unity Web Player"/>
     <Content type="html">
 <![CDATA[
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
+
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>prefs.getString("title")</title>
 		<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
@@ -129,9 +128,6 @@
 		}
 		-->
 		</style>
-	</head>
-	<body>
-		<p class="header">prefs.getString("caption")</p>
 		<div class="content">
 			<div id="unityPlayer">
 				<div class="missing">
@@ -147,8 +143,6 @@
 			</div>
 		</div>
 		<p class="footer">&laquo; created with <a href="//unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
-	</body>
-</html>
 ]]>
     </Content>
 </Module>
