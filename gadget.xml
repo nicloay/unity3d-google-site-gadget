@@ -3,7 +3,7 @@
                  width="800" height="600"
                  author="Nikolay Kandalintsev" author_email="nicloay@gmail.com"
                  description="This gadget allow you to insert unity3d webbuild to your google site"
-                 thumbnail="://unity3d.com/profiles/unity3d/themes/unity/images/assets/favicons/apple-touch-icon-72x72.png"/>
+                 thumbnail="//unity3d.com/profiles/unity3d/themes/unity/images/assets/favicons/apple-touch-icon-72x72.png"/>
     <UserPref name="url" display_name="WebPlayer *.unity3d Url" required="true" />
     <UserPref name="width" display_name="Width" required="true" default_value="640"/>
     <UserPref name="height" display_name="Height" required="true" default_value="480"/>
@@ -135,18 +135,18 @@
 		<div class="content">
 			<div id="unityPlayer">
 				<div class="missing">
-					<a href="://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+					<a href="//unity3d.com/webplayer/" title="Unity Web Player. Install now!">
 						<img alt="Unity Web Player. Install now!" id="getUnityPNG" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
 					</a>
 				</div>
 				<div class="broken">
-					<a href="://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
+					<a href="//unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
 						<img alt="Unity Web Player. Install now! Restart your browser after install." id="getUnityRestartPNG" src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
 					</a>
 				</div>
 			</div>
 		</div>
-		<p class="footer">&laquo; created with <a href="://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+		<p class="footer">&laquo; created with <a href="//unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
 	</body>
 </html>
 ]]>
