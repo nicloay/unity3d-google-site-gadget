@@ -3,31 +3,40 @@
                  width="800" height="600"
                  author="Nikolay Kandalintsev" author_email="nicloay@gmail.com"
                  description="This gadget allow you to insert unity3d webbuild to your google site"
-                 thumbnail="://unity3d.com/profiles/unity3d/themes/unity/images/assets/favicons/apple-touch-icon-72x72.png"/>
+                 thumbnail="//unity3d.com/profiles/unity3d/themes/unity/images/assets/favicons/apple-touch-icon-72x72.png"/>
     <UserPref name="url" display_name="WebPlayer *.unity3d Url" required="true" />
     <UserPref name="width" display_name="Width" required="true" default_value="640"/>
     <UserPref name="height" display_name="Height" required="true" default_value="480"/>
-    <UserPref name="title" display_name="Title" required="true" default_value="Unity Web Player"/>
     <Content type="html">
 <![CDATA[
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>prefs.getString("title")</title>
+        <script type="text/javascript">
+
+
+            var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+
+            if (document.location.protocol == 'https:'){
+                unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+            }
+            var script   = document.createElement("script");
+            script.type  = "text/javascript";
+            script.src   = unityObjectUrl;
+            gadgets.util.getBodyElement().appendChild(script);
+          </script>
+
 		<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
+
 		<script type="text/javascript">
-		<!--
-		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+		var prefs = new gadgets.Prefs();
+
 		if (document.location.protocol == 'https:'){
 			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
-            $("#getUnityPNG").attr("src",$("#getUnityPNG").src.replace("http://", "https://ssl-"));
-            $("#getUnityRestartPNG").attr("src",$("#getUnityRestartPNG").src.replace("http://", "https://ssl-"));
 		}
-		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
-		-->
-		</script>
-		<script type="text/javascript">
-		<!--
+
+
+        </script>
+        <script type="text/javascript">
+
+
 			var config = {
 				width: prefs.getString("width"),
 				height: prefs.getString("height"),
@@ -70,13 +79,11 @@
 						break;
 					}
 				});
-				u.initPlugin(jQuery("#unityPlayer")[0], "2DWinterPack.unity3d");
+				u.initPlugin(jQuery("#unityPlayer")[0], prefs.getString("url"));
 			});
-		-->
 		</script>
 		<style type="text/css">
-		<!--
-		body {
+		#boddy {
 			font-family: Helvetica, Verdana, Arial, sans-serif;
 			background-color: white;
 			color: black;
@@ -112,7 +119,7 @@
 		div.missing a {
 			height: 63px;
 			position: relative;
-			top: -31px;
+			top: 10px;
 		}
 		div.broken img,
 		div.missing img {
@@ -126,28 +133,34 @@
 			height: prefs.getString("height")px;
 			width: prefs.getString("width")px;
 		}
-		-->
+		}
 		</style>
-	</head>
-	<body>
-		<p class="header">prefs.getString("caption")</p>
-		<div class="content">
-			<div id="unityPlayer">
-				<div class="missing">
-					<a href="://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
-						<img alt="Unity Web Player. Install now!" id="getUnityPNG" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
-					</a>
-				</div>
-				<div class="broken">
-					<a href="://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
-						<img alt="Unity Web Player. Install now! Restart your browser after install." id="getUnityRestartPNG" src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
-					</a>
-				</div>
-			</div>
-		</div>
-		<p class="footer">&laquo; created with <a href="://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
-	</body>
-</html>
+        <div id="boddy">
+            <div class="content">
+                <div id="unityPlayer">
+                    <div class="missing">
+                        <a href="//unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+                        </a>
+                    </div>
+                    <div class="broken">
+                        <a href="//unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </boddy>
+		<p class="footer">&laquo; created with <a href="//unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+
+        <script type="text/javascript">
+            var missingTag='<img alt="Unity Web Player. Install now!" id="getUnityPNG" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />';
+            var brokenTag ='<img alt="Unity Web Player. Install now! Restart your browser after install." id="getUnityRestartPNG" src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />'
+            if (document.location.protocol == 'https:'){
+                missingTag = missingTag.replace("http://", "https://ssl-");
+                brokenTag = brokenTag.replace("http://", "https://ssl-");
+	    	}
+	    	$(".missing a").append(missingTag);
+            $(".broken a").append(brokenTag);
+        </script>
 ]]>
     </Content>
 </Module>
