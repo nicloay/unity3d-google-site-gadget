@@ -18,7 +18,8 @@ It works with http as well as https protocol.
   * **Insert -> More gadget ...**
   * In opened window select **Add gadget by URL**
   * Insert following link to the input box
-    `https://github.com/nicloay/unity3d-google-site-gadget/releases/download/version_1.0/gadget.xml`
+    `https://github.com/nicloay/unity3d-google-site-gadget/releases/download/version_1.0/gadget.xml`     
+    all versions of this gadget can be found [here](https://github.com/nicloay/unity3d-google-site-gadget/releases)
   * Insert link (which you stored before) to the **WebPlayer *.unity3d Url (required)** field
     e.g. in my case `https://sites.google.com/site/nicloay/2DWinterPack.unity3d?attredirects=0&d=1`
   * change **width** and **height** if you need
