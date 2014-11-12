@@ -35,18 +35,16 @@
 
         </script>
         <script type="text/javascript">
-
-
-			var config = {
-				width: prefs.getString("width"),
-				height: prefs.getString("height"),
-				params: { enableDebugging:"0" }
-
-			};
-			var u = new UnityObject2(config);
-
-			jQuery(function() {
-
+		jQuery(function() {
+			$(document).ready(function() {
+		
+				var config = {
+					width: prefs.getString("width"),
+					height: prefs.getString("height"),
+					params: { enableDebugging:"0" }
+				};
+				var u = new UnityObject2(config);
+	
 				var $missingScreen = jQuery("#unityPlayer").find(".missing");
 				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
 				$missingScreen.hide();
@@ -81,6 +79,7 @@
 				});
 				u.initPlugin(jQuery("#unityPlayer")[0], prefs.getString("url"));
 			});
+		});
 		</script>
 		<style type="text/css">
 		#boddy {
